@@ -1,6 +1,14 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  Mail,
+  Phone,
+  Linkedin,
+  Github,
+  MapPin,
+  MessageCircle
+} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,6 +103,52 @@ const ContactSection = () => {
     // No idle animation on headings/details, only background moves
   }, []);
 
+ const DockIcon = ({ children, href, label, accent }) => (
+  <a
+    href={href}
+    target="_blank"
+    className={`
+      relative w-12 h-12
+      flex items-center justify-center
+      rounded-full
+      bg-black/90 text-white
+      active:scale-95 transition
+      ${accent === "green" && "bg-green-500"}
+      ${accent === "blue" && "bg-blue-500"}
+    `}
+  >
+    {children}
+  </a>
+);
+
+const RailIcon = ({ children, href, label, accent }) => (
+  <a
+    href={href}
+    target="_blank"
+    className={`
+      group relative w-14 h-14
+      flex items-center justify-center
+      rounded-full
+      border border-black/10
+      hover:scale-125 transition-all duration-300
+      hover:shadow-xl
+      ${accent === "green" && "hover:text-green-500 hover:border-green-500"}
+      ${accent === "blue" && "hover:text-blue-500 hover:border-blue-500"}
+    `}
+  >
+    {children}
+
+    <span className="
+      absolute right-16 opacity-0
+      group-hover:opacity-100
+      transition bg-black text-white text-sm px-3 py-1 rounded
+      whitespace-nowrap
+    ">
+      {label}
+    </span>
+  </a>
+);
+
   return (
     <section
       ref={sectionRef}
@@ -107,23 +161,56 @@ const ContactSection = () => {
         <h1 ref={(el) => (headingRefs.current[2] = el)} className="text-fluid-dynamic font-black leading-[100%] text-left">AND BUILD</h1>
       </div>
 
-      <div className="md:w-[50%] w-full md:h-fit h-full flex flex-col justify-center items-end relative z-10">
-        <p ref={(el) => (detailRefs.current[0] = el)} className="text-md sm:text-md md:text-xl lg:text-2xl text-right mb-4">
-           hussainshahmeer99@gmail.com
-        </p>
-        {/* <p ref={(el) => (detailRefs.current[1] = el)} className="text-md sm:text-md md:text-xl lg:text-2xl text-right mb-4">
-          Phone: +92-123-4567890
-        </p>
-        <p ref={(el) => (detailRefs.current[2] = el)} className="text-md sm:text-md md:text-xl lg:text-2xl text-right mb-4">
-          LinkedIn: linkedin.com/in/shahmeer-hussain
-        </p>
-        <p ref={(el) => (detailRefs.current[3] = el)} className="text-md sm:text-md md:text-xl lg:text-2xl text-right mb-4">
-          GitHub: github.com/shahmeer-hussain
-        </p> */}
-        <p ref={(el) => (detailRefs.current[4] = el)} className="text-md sm:text-md md:text-xl lg:text-2xl text-right">
-           Karachi, Pakistan
-        </p>
-      </div>
+  <div className="md:w-[50%] w-full relative z-10">
+
+  {/* Mobile Floating Dock */}
+  <div className="
+    block
+    md:hidden
+    flex gap-4 px-6 py-3 justify-center
+  ">
+    <DockIcon href="mailto:hussainshahmeer99@gmail.com" label="Email">
+      <Mail />
+    </DockIcon>
+
+    <DockIcon href="https://wa.me/921234567890" label="WhatsApp" accent="green">
+      <MessageCircle />
+    </DockIcon>
+
+    <DockIcon href="https://linkedin.com/in/shahmeer-hussain" label="LinkedIn" accent="blue">
+      <Linkedin />
+    </DockIcon>
+
+    <DockIcon href="https://github.com/shahmeer-hussain" label="GitHub">
+      <Github />
+    </DockIcon>
+  </div>
+
+  {/* Desktop Side Rail */}
+  <div className="
+    hidden md:flex flex-col gap-6 items-end
+    absolute right-0 top-5
+  ">
+    <RailIcon href="mailto:hussainshahmeer99@gmail.com" label="Email">
+      <Mail />
+    </RailIcon>
+
+    <RailIcon href="https://wa.me/921234567890" label="WhatsApp" accent="green">
+      <MessageCircle />
+    </RailIcon>
+
+    <RailIcon href="https://linkedin.com/in/shahmeer-hussain" label="LinkedIn" accent="blue">
+      <Linkedin />
+    </RailIcon>
+
+    <RailIcon href="https://github.com/shahmeer-hussain" label="GitHub">
+      <Github />
+    </RailIcon>
+  </div>
+
+</div>
+
+
     </section>
   );
 };
