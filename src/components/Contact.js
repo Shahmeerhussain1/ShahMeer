@@ -195,15 +195,15 @@ const RailIcon = ({ children, href, label, accent }) => (
       <Mail />
     </RailIcon>
 
-    <RailIcon href="https://wa.me/921234567890" label="WhatsApp" accent="green">
+    <RailIcon href="https://wa.me/923202186570" label="WhatsApp" accent="green">
       <MessageCircle />
     </RailIcon>
 
-    <RailIcon href="https://linkedin.com/in/shahmeer-hussain" label="LinkedIn" accent="blue">
+    <RailIcon href="https://linkedin.com/in/shah-meer-hussain" label="LinkedIn" accent="blue">
       <Linkedin />
     </RailIcon>
 
-    <RailIcon href="https://github.com/shahmeer-hussain" label="GitHub">
+    <RailIcon href="https://github.com/shahmeerhussain1" label="GitHub">
       <Github />
     </RailIcon>
   </div>
