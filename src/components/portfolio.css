@@ -37,7 +37,7 @@ html.lenis, html.lenis body { height: auto; }
 .pf-huge { font-size: clamp(3.4rem, 13vw, 13rem); }
 .pf-mid { font-size: clamp(2.8rem, 8.5vw, 8rem); }
 .pf-ln { display: block; }
-.pf-w { display: inline-block; padding-bottom: 0.12em; margin-bottom: -0.12em; vertical-align: top; }
+.pf-w { display: inline-block ; padding-bottom: 0.12em; margin-bottom: -0.12em; vertical-align: top; }
 .pf-c { display: inline-block; will-change: transform; }
 .pf-wd { opacity: 0.16; }
 .pf-it { font-style: italic; }
