@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Syne:wght@700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Add to your tailwind utilities or css */
+.font-sans-elite { font-family: 'Syne', sans-serif; }
+.font-serif-elite { font-family: 'Playfair Display', serif; }
 
 
 @keyframes shimmer {

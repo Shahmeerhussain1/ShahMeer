@@ -136,7 +136,7 @@ const HowItAllBeganSection = () => {
       </div>
 
       <div className="md:w-[50%] w-full md:h-fit h-full flex items-center md:items-start relative z-10">
-        <p ref={paragraphRef} className="text-md sm:text-md md:text-xl lg:text-2xl text-right">
+        <p ref={paragraphRef} className="text-md sm:text-md md:text-xl text-right">
           MERN stack developer from Karachi, Pakistan. My journey in tech didn’t follow the traditional path. I didn’t wait until graduation to start building. While pursuing my high school in Computer Science at Iqra University, I jumped straight into the real world of development — interning, freelancing, and shipping projects from day one.
           It started with curiosity, How do websites actually work?That curiosity turned into late-night coding sessions, online certifications, and eventually, my first internship at iSystematic Inc. in early 2023.
           Within months, I was trusted to build features, debug backend APIs, and collaborate with teams. That experience opened doors — I joined Monster Hub as a MERN Stack Engineer, and now, I’m growing further at Devtronics.

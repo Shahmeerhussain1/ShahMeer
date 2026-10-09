@@ -1,35 +1,3 @@
-// //OFFICIAL
-// const HeroSection = () => {
-//     return (
-//         <section className="h-screen w-[90vw] mx-auto  md:py-8 py-4 flex flex-col justify-between">
-//             <div className="flex justify-between flex-col h-full sm:flex-row">
-//                 <div>
-//                     <h1 className="text-fluid-dynamic font-black leading-[100%] text-left">HI</h1>
-//                     <h1 className="text-fluid-dynamic font-black leading-[100%] text-left">I AM</h1>
-//                     <h1 className="text-fluid-dynamic font-black leading-[100%] text-left">SHAH</h1>
-//                     <h1 className="text-fluid-dynamic font-black leading-[100%] text-left">MEER</h1>
-//                 </div>
-//                 <div>
-//                     <h1 className="text-fluid-dynamic font-black leading-[100%] text-right">A</h1>
-//                     <h1 className="text-fluid-dynamic font-black leading-[100%] text-right">DEV</h1>
-//                     <h1 className="text-fluid-dynamic font-black leading-[100%] text-right">CRAFTER</h1>
-//                     <h1 className="text-fluid-dynamic font-black leading-[100%] text-right">LEARNER</h1>
-//                 </div>
-//             </div>
-
-//             {/* <div className="w-full">
-//                 <div className="absolute bottom-0 w-[90%]">
-//                     <img src="./shah.png" className="w-[70%] md:w-[35%]" />
-//                 </div>
-//             </div> */}
-//         </section>
-//     )
-// }
-
-// export default HeroSection
-
-
-
 
 // GEMINI
 import { useEffect, useRef } from "react";
@@ -136,19 +104,6 @@ const HeroSection = () => {
           <h1 ref={(el) => (rightHeadingRefs.current[3] = el)} className="text-fluid-dynamic font-black leading-[100%] text-right">LEARNER</h1>
         </div>
       </div>
-      {/* <div className="w-full absolute bottom-0 w-[90%] relative z-10">
-        <img
-          src="./shah.png"
-          className="w-[70%] md:w-[35%]"
-          onLoad={(e) => {
-            gsap.fromTo(
-              e.target,
-              { opacity: 0, y: 50 },
-              { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", delay: 1 }
-            );
-          }}
-        />
-      </div> */}
     </section>
   );
 };
