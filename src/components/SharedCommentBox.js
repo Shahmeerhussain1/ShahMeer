@@ -21,7 +21,6 @@ export default function SharedCommentBox() {
     const [loading, setLoading] = useState(false)
     const [fetching, setFetching] = useState(true)
     const [copied, setCopied] = useState(false)
-    const [autoSave, setAutoSave] = useState(false)
 
     // Files
     const [isDragging, setIsDragging] = useState(false)
@@ -36,15 +35,6 @@ export default function SharedCommentBox() {
         fetchText()
         fetchFiles()
     }, [])
-
-    // Auto-save
-    // useEffect(() => {
-    //     if (!autoSave || fetching) return
-    //     const timer = setTimeout(() => {
-    //         if (text.trim()) saveText(true)
-    //     }, 2500)
-    //     return () => clearTimeout(timer)
-    // }, [text, autoSave, fetching])
 
     // ---------- TEXT ----------
     async function fetchText() {
