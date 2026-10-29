@@ -38,13 +38,13 @@ export default function SharedCommentBox() {
     }, [])
 
     // Auto-save
-    useEffect(() => {
-        if (!autoSave || fetching) return
-        const timer = setTimeout(() => {
-            if (text.trim()) saveText(true)
-        }, 2500)
-        return () => clearTimeout(timer)
-    }, [text, autoSave, fetching])
+    // useEffect(() => {
+    //     if (!autoSave || fetching) return
+    //     const timer = setTimeout(() => {
+    //         if (text.trim()) saveText(true)
+    //     }, 2500)
+    //     return () => clearTimeout(timer)
+    // }, [text, autoSave, fetching])
 
     // ---------- TEXT ----------
     async function fetchText() {
@@ -226,15 +226,7 @@ export default function SharedCommentBox() {
                         <div>
                             <div className="flex justify-between mb-2">
                                 <label className="text-sm font-medium text-slate-700">Shared text</label>
-                                <label className="flex items-center gap-2 text-xs text-slate-500 cursor-pointer">
-                                    <input
-                                        type="checkbox"
-                                        checked={autoSave}
-                                        onChange={e => setAutoSave(e.target.checked)}
-                                        className="rounded"
-                                    />
-                                    Auto-save
-                                </label>
+                             
                             </div>
 
                             {fetching ? (
